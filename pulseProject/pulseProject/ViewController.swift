@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var rs: NSLayoutConstraint!
+    
+     var menuShow = true
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +23,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func btn(_ sender: UIBarButtonItem) {
+        
+        
+        if (menuShow){
+            
+            rs.constant = 0
+            
+        }
+            
+        else {
+            rs.constant = -140
+        }
+        menuShow = !menuShow
+        
+    }
+    
 
-}
+
+    }
+
+
 
